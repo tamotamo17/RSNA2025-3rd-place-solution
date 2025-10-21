@@ -25,6 +25,8 @@ poetry install
 ```
 
 ## Data Preparation
+1. Download competition data
+`poetry run kaggle competitions download -c rsna-intracranial-aneurysm-detection`
 1. Metadata extraction & train/validation split  
 Run `notebooks/prepare_dataset/rsna2025-eda-plus3d.ipynb` to create train_add_metadata_v5.csv.  
 Kaggle version: [here](https://www.kaggle.com/code/tamotamo/rsna2025-eda-plus3d)

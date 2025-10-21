@@ -1,0 +1,90 @@
+[tool.poetry]
+name = "RSNA2025"
+version = "0.1.0"
+description = ""
+authors = ["Ryo Tamoto"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+torch       = {version = "2.7.1+cu128", source = "torch_cu128"}
+torchvision = {version = "0.22.1+cu128", source = "torch_cu128"}
+segmentation-models-pytorch = "0.5.0" # "0.3.3"
+onnxruntime-gpu = "^1.18.0"
+opencv-python = "^4.6.0.66"
+scipy = "^1.9.3"
+pyyaml = "^6.0.1"
+einops = "0.3.0"
+tqdm = "4.57.0"
+p-tqdm = "1.3.3"
+wrapt = ">=1.15.0"
+clang = "5.0"
+termcolor = "1.1.0"
+timm = "0.9.7"
+torchmetrics = "0.9.2"
+tensorboard = ">=2.16"
+omegaconf = "2.0.6"
+runai = "0.4.0"
+pytest = "6.2.5"
+pydicom = "2.3.0"
+nibabel = "3.2.1"
+# simpleitk = "2.1.1.2"
+autopep8 = "^2.0.0"
+gitpython = "^3.1.29"
+jinja2 = "3.0"
+protobuf = ">=3.20.2"
+# astropy = "5.1"
+matplotlib = "^3.6.1"
+decorator = "^5.1.1"
+# scikit-image = "^0.19.3"
+ipython-genutils = "^0.2.0"
+pygments = "2.12.0"
+ipython = "^8.6.0"
+ipywidgets = "^8.0.2"
+pycocotools = "^2.0.5"
+effdet = "^0.3.0"
+pandas = "^1.5.3"
+seaborn = "^0.13.0"
+numpy = "^1.26.1"
+albumentations = "^1.3.1"
+attrdict = "^2.0.1"
+onnx = "^1.16.0"
+pytorch-metric-learning = "^2.4.1"
+scikit-learn = "^1.4.1.post1"
+grad-cam = "^1.5.0"
+ruff = "^0.9.6"
+transformers = "^4.52.4"
+ninja = "^1.11.1.4"
+wheel = "^0.45.1"
+packaging = "^25.0"
+cmake = "^4.0.3"
+simpleitk = "^2.5.2"
+huggingface-hub = "^0.33.4"
+python-dotenv = "^1.1.1"
+zarr = ">=2.10,<3.0"
+scikit-image = "^0.25.2"
+kaggle = "^1.7.4.5"
+timm-3d = "^1.0.1"
+segmentation-models-pytorch-3d = "^1.0.2"
+h5py = "^3.14.0"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+notebook = "^6.5.4"
+nbconvert = "^7.5.0"
+scikit-learn = "^1.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+ 
+[[tool.poetry.source]]
+name = "torch_cu128"
+url = "https://download.pytorch.org/whl/cu128"
+priority = "explicit"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
