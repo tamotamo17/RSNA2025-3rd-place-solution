@@ -74,3 +74,11 @@ Then, run training with the following command:
 ```bash
 sh run_train.sh
 ```
+
+## Missing DICOM Tags & Fallbacks
+Some DICOM files lack critical metadata tags (e.g., `PixelSpacing`, `SliceThickness`). We trained a regression model to predict these missing values from image data.
+
+**Training:**
+```bash
+python run_train_spacing.py --csv_path {your_png_dir} --img_dir {your_png_dir} --output_dir {your_output_dir}
+```
